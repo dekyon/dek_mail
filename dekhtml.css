@@ -1,0 +1,68 @@
+/*
+    This file is part of Dekyon Mail.
+
+    Dekyon Mail is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Dekyon Mail is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Dekyon Mail.  If not, see <https://www.gnu.org/licenses/>.
+    
+*/
+
+/* USE OF FONTS
+    font-family: --font-title;     For titles: will automatically be bold
+    font-family: --font-labels;    For field labels, notices from Dekyon, subject lines... not for email content
+    font-family: --font-content;   For email content
+    
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Nunito');
+
+:root {
+    --font-title: 'Montserrat', sans-serif;
+    --font-labels: 'Nunito', sans-serif;
+    --font-content: 'Arial', 'Helvetica', sans-serif;
+    --color-title-black: #292929;
+    --color-title-white: #EBEBEB;
+    --color-mail-accent: #1174F3; /* Accent color is different for different products. Mail is blue */
+    --color-white: #F0F0F0;
+    --color-black: #141414;
+    
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    
+    color: --color-white;
+    background: --color-black; /* until a good wallpaper is selected and edited. must be dimmed for visibility */
+}
+
+dek-h {
+    font-family: --font-title;
+    font-size: 2.5em;
+}
+dek-h:hover {
+    text-decoration: underline;
+}
+
+dek-card {
+    background: --color-white;
+    color: --color-black;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+}
+dek-card[dek-bottom-sheet] {
+    -webkit-border-radius: 2px 2px 0 0;
+    border-radius: 2px 2px 0 0;
+}
+dek-card[inverted] {
+    background: --color-black;
+    color: --color-white;
+}
